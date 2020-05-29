@@ -5,14 +5,25 @@
     <title>fancy-weather</title>
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/slider.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
 <header class="header">
     <div class="options">
         <button class="restart buttons__template">Рестарт</button>
-        <button class="lang buttons__template">RU</button>
-        <button class="units buttons__template">F</button>
-        <button class="units buttons__template">C</button>
+        <label>
+            <select class="lang buttons__template">
+                <option value="ru">RU</option>
+                <option value="en">EN</option>
+            </select>
+        </label>
+        <label>
+            <select class="units buttons__template">
+                <option value="F" class="selects__template">F</option>
+                <option value="C">C</option>
+            </select>
+        </label>
+
     </div>
     <div class="searcher">
         <label class="right__content">
@@ -31,5 +42,6 @@
 
     <div class="weather__today"></div>
 </section>
+<script src="script.js"></script>
 </body>
 </html>

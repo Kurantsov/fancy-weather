@@ -1,6 +1,6 @@
 .slider {
-    width: 200px;
-    height: 320px;
+    width: 150px;
+    height: 270px;
     border: 1px solid black;
     background-color: white;
     opacity: 0.5;
@@ -15,5 +15,17 @@
 
 .city__name {
     font-size: 30px;
-    color: green;
+    margin: 10px;
+}
+
+.temperature__today {
+    margin: 10px;
+}
+
+.weather__description {
+    margin: 10px;
+}
+
+.weather__icon {
+    margin: 10px;
 }

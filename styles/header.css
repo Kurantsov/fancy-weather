@@ -9,6 +9,7 @@ body {
     background-size: cover;
     backdrop-filter: grayscale(60%) blur(5px);
     position: fixed;
+    font-family: 'Playfair Display', serif;
 }
 
 header {
