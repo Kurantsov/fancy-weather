@@ -1,18 +1,16 @@
-// a4d19601717c7d366eca6b925b3a692e
-
 function startSearch() {
   const start = document.querySelector('.buttons_search');
+  start.onclick = () => {
+    // eslint-disable-next-line no-use-before-define
+    getWeatherInformation(getCityName());
+  };
 }
+
+startSearch();
 
 function getCityName() {
   const input = document.querySelector('.input__city');
-  console.log(input.textContent);
-}
-
-getCityName();
-
-function name() {
-  return 'МиНсК';
+  return input.value;
 }
 
 function getWeatherInformation(cityName) {
@@ -21,6 +19,7 @@ function getWeatherInformation(cityName) {
   /** @namespace data.main.temp, @namespace data.weather[0]['description'] * */
   /** @namespace data.weather[0]['description'] * */
     .then((data) => {
+      // eslint-disable-next-line no-console
       console.log(data);
       document.querySelector('.city__name').innerHTML = data.name;
       document.querySelector('.temperature__today').innerHTML = `${Math.round(data.main.temp - 273).toString()}&deg`;
@@ -31,5 +30,4 @@ function getWeatherInformation(cityName) {
     });
 }
 
-
-getWeatherInformation(name());
+// google API = AIzaSyAQd43_QA0uYHpJCAZFvxrnG5kqyaVZtx4
