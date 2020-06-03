@@ -13,6 +13,7 @@ function getCityName() {
   return input.value;
 }
 
+
 function getWeatherInformation(cityName) {
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=a4d19601717c7d366eca6b925b3a692e`)
     .then((response) => response.json())

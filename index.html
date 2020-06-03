@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <title>fancy-weather</title>
     <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/slider.css">
+    <link rel="stylesheet" href="styles/center.css">
+    <link rel="stylesheet" href="styles/map.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -33,12 +34,24 @@
     </div>
 </header>
 
-<section class="slider">
-    <div class="city__name"></div>
-    <div class="temperature__today"></div>
-    <div class="weather__description"></div>
-    <div class="weather__icon"></div>
+<section class="center">
+    <section class="slider">
+        <div class="city__name"></div>
+        <div class="temperature__today"></div>
+        <div class="weather__description"></div>
+        <div class="weather__icon"></div>
+    </section>
+    <section class="map">
+        <div id="map"></div>
+    </section>
 </section>
-<script src="script.js"></script>
+
+
+<script src="getInformationToWeather.js"></script>
+<script src="map.js">
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQd43_QA0uYHpJCAZFvxrnG5kqyaVZtx4&callback=initMap">
+</script>
 </body>
 </html>
