@@ -28,5 +28,3 @@ function startSearch() {
 }
 
 startSearch();
-
-export default addWeatherInformation();

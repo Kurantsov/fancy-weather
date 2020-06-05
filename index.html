@@ -12,18 +12,15 @@
 <header class="header">
     <div class="options">
         <button class="restart buttons__template">Рестарт</button>
-        <label>
-            <select class="lang buttons__template">
-                <option value="ru">RU</option>
-                <option value="en">EN</option>
-            </select>
-        </label>
-        <label>
-            <select class="units buttons__template">
-                <option value="F" class="selects__template">F</option>
-                <option value="C">C</option>
-            </select>
-        </label>
+        <div class="language">
+            <input type="button" id="RU" class="buttons__template RU__button lang active" value="RU">
+            <input type="button" id="EN" class="buttons__template EN__button lang" value="EN">
+        </div>
+
+        <div class="degrees">
+            <button id="F" class="buttons__template F__button active">F</button>
+            <button id="C" class="buttons__template C__button">C</button>
+        </div>
 
     </div>
     <div class="searcher">
@@ -53,5 +50,7 @@
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAQd43_QA0uYHpJCAZFvxrnG5kqyaVZtx4&callback=initMap">
 </script>
+
+<script src="appearanceOfTheMainPage.js"></script>
 </body>
 </html>

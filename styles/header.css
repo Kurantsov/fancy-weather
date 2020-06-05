@@ -35,17 +35,11 @@ body {
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    margin-right: 30px;
-    border-radius: 10px;
-
+    color: white;
 }
 
 .buttons__template:hover {
     opacity: 0.8;
-}
-
-.restart, .lang, .units {
-    color: white;
 }
 
 .searcher {
@@ -85,4 +79,28 @@ body {
 
 .buttons_search:hover {
     opacity: 0.8;
+}
+
+.restart {
+    border-radius: 10px;
+}
+
+.language,
+.degrees {
+    display: flex;
+    margin-left: 30px;
+}
+
+.RU__button,
+.F__button {
+    border-radius: 10px 0 0 10px;
+}
+
+.EN__button,
+.C__button {
+    border-radius: 0 10px 10px 0;
+}
+
+.active {
+    background-color: green;
 }
