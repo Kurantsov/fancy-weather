@@ -3,7 +3,7 @@ function initMap() {
   const lng = 27.567444;
   const element = document.getElementById('map');
   const options = {
-    center: { lat: 53.893009, lng: 27.567444 },
+    center: { lat, lng },
     zoom: 5,
   };
   // eslint-disable-next-line no-unused-vars,no-undef
