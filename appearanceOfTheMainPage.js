@@ -1,3 +1,5 @@
+import LANGUAGE from './language.js';
+
 function languagePage() {
   const language = document.querySelector('.language');
   const ruLang = language.querySelector('#RU');
@@ -31,3 +33,10 @@ function degreesPage() {
 }
 
 degreesPage();
+
+function changeLanguage() {
+  const restart = document.querySelector('.restart');
+  restart.textContent = LANGUAGE.RU.restart;
+}
+
+changeLanguage();
