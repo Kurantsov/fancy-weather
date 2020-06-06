@@ -1,3 +1,5 @@
+import {map} from "./map.js";
+
 function getCityName() {
   const input = document.querySelector('.input__city');
   return input.value;
@@ -17,14 +19,19 @@ async function addWeatherInformation() {
   document.querySelector('.temperature__today').innerHTML = `${Math.round(requestJSON.main.temp - 273).toString()}&deg`;
   document.querySelector('.weather__description').innerHTML = requestJSON.weather[0].description;
   document.querySelector('.icon').src = `https://openweathermap.org/img/wn/${requestJSON.weather[0].icon}@2x.png`;
+  console.log(requestJSON.coord)
+  return  requestJSON.coord
 }
 
 
 function startSearch() {
   const start = document.querySelector('.buttons_search');
   start.onclick = () => {
-    addWeatherInformation();
+    addWeatherInformation()
+    map(addWeatherInformation())
   };
 }
 
 startSearch();
+
+export {addWeatherInformation}

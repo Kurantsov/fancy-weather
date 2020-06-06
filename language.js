@@ -1,13 +1,13 @@
 const LANGUAGE = {
   RU: {
-    restart: 'рестарт',
+    restart: 'Рестарт',
     input: 'Введите название города',
     search: 'Поиск',
   },
   EN: {
-    restart: 'restart',
+    restart: 'Restart',
     input: 'Enter the name of the city',
-    search: 'search',
+    search: 'Search',
   },
 };
 
