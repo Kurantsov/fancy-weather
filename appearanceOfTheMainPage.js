@@ -34,9 +34,36 @@ function degreesPage() {
 
 degreesPage();
 
-function changeLanguage() {
-  const restart = document.querySelector('.restart');
-  restart.textContent = LANGUAGE.RU.restart;
+function getLanguageOnPage() {
+  let language = document.querySelector('.language');
+  language.onclick = () => {
+    let Lang = language.querySelector('.active');
+    if (Lang.value === 'RU') {
+      russianPage();
+    }
+    if (Lang.value === 'EN') {
+      englishPage();
+    }
+  }
 }
 
-changeLanguage();
+getLanguageOnPage();
+
+
+function englishPage() {
+  const restart = document.querySelector('.restart');
+  restart.textContent = LANGUAGE.EN.restart;
+  const input = document.querySelector('.input__city');
+  input.placeholder = LANGUAGE.EN.input
+  const search = document.querySelector('.buttons_search');
+  search.value = LANGUAGE.EN.search;
+}
+
+function russianPage() {
+  const restart = document.querySelector('.restart');
+  restart.textContent = LANGUAGE.RU.restart;
+  const input = document.querySelector('.input__city');
+  input.placeholder = LANGUAGE.RU.input
+  const search = document.querySelector('.buttons_search');
+  search.value = LANGUAGE.RU.search;
+}
