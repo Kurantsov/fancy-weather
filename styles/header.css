@@ -5,9 +5,9 @@ body {
     height: 100%;
     background-repeat: no-repeat;
     background-color: black;
-    background-image: url("../patterns/images/beach.jpg");
+    /*background-image: url("../patterns/images/beach.jpg");*/
     background-size: cover;
-    backdrop-filter: grayscale(60%) blur(5px);
+    backdrop-filter: grayscale(60%) blur(1px);
     position: fixed;
     font-family: 'Playfair Display', serif;
 }

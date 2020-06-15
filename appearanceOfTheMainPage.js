@@ -1,4 +1,5 @@
 import LANGUAGE from './language.js';
+import PICTURES from "./pictures.js";
 
 function languagePage() {
   const language = document.querySelector('.language');
@@ -67,3 +68,20 @@ function russianPage() {
   const search = document.querySelector('.buttons_search');
   search.value = LANGUAGE.RU.search;
 }
+
+function backgroundPicture() {
+  let body = document.querySelector('body');
+  let randomNumber = Math.floor(Math.random() / 0.1);
+  body.style.backgroundImage = `url(${PICTURES[randomNumber].src})`
+}
+
+backgroundPicture();
+
+function restartPicture() {
+  let restart = document.querySelector('.restart');
+  restart.onclick = () => {
+    backgroundPicture();
+  }
+}
+
+restartPicture();
