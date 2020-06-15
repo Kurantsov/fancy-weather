@@ -1,27 +1,24 @@
-async function map(coordinates) {
-  let script = document.createElement('script');
-  script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAQd43_QA0uYHpJCAZFvxrnG5kqyaVZtx4&callback=initMap';
-  script.defer = true;
-  script.async = true;
+let lon = 27.57;
+let lat = 53.9;
 
-  window.initMap = function () {
-    const lat = 53.893009;
-    const lng = 27.567444;
-    const element = document.getElementById('map');
-    const options = {
-      center: {lat, lng},
-      zoom: 5,
-    };
-    const myMap = new google.maps.Map(element, options);
-    const marker = new google.maps.Marker({
-      position: {lat, lng},
-      map: myMap,
+
+function map() {
+  ymaps.ready(init);
+
+  function init() {
+    let myMap = new ymaps.Map("map", {
+      center: [lat, lon],
+      zoom: 10
     });
-  };
 
-  document.head.appendChild(script);
+    myMap.geoObjects
+      .add(new ymaps.Placemark([lat, lon], {
+        balloonContent: 'Город, погода которого вас интересует'
+      }, {
+        preset: 'islands#dotIcon',
+        iconColor: '#735184'
+      }))
+  }
 }
 
-map()
-
-export {map}
+map();

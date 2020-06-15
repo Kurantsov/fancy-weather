@@ -1,5 +1,3 @@
-import {map} from "./map.js";
-
 function getCityName() {
   const input = document.querySelector('.input__city');
   return input.value;
@@ -28,7 +26,6 @@ function startSearch() {
   const start = document.querySelector('.buttons_search');
   start.onclick = () => {
     addWeatherInformation()
-    map(addWeatherInformation())
   };
 }
 
