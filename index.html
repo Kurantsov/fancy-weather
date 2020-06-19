@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>fancy-weather</title>
@@ -8,46 +9,48 @@
     <link rel="stylesheet" href="styles/map.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<header class="header">
-    <div class="options">
-        <button class="restart buttons__template">Рестарт</button>
-        <div class="language">
-            <input type="button" id="RU" class="buttons__template RU__button lang active" value="RU">
-            <input type="button" id="EN" class="buttons__template EN__button lang" value="EN">
+    <header class="header">
+        <div class="options">
+            <button class="restart buttons__template">Рестарт</button>
+            <div class="language">
+                <input type="button" id="RU" class="buttons__template RU__button lang active" value="RU">
+                <input type="button" id="EN" class="buttons__template EN__button lang" value="EN">
+            </div>
+
+            <div class="degrees">
+                <button id="F" class="buttons__template F__button active">F</button>
+                <button id="C" class="buttons__template C__button">C</button>
+            </div>
+
         </div>
-
-        <div class="degrees">
-            <button id="F" class="buttons__template F__button active">F</button>
-            <button id="C" class="buttons__template C__button">C</button>
+        <div class="searcher">
+            <label class="right__content">
+                <input type="text" class="input__city" placeholder="Введите название города">
+                <input type="button" class="buttons_search" value="Поиск">
+            </label>
         </div>
+    </header>
 
-    </div>
-    <div class="searcher">
-        <label class="right__content">
-            <input type="text" class="input__city" placeholder="Введите название города">
-            <input type="button" class="buttons_search" value="Поиск">
-        </label>
-    </div>
-</header>
-
-<section class="center">
-    <section class="slider">
-        <div class="city__name"></div>
-        <div class="temperature__today"></div>
-        <div class="weather__description"></div>
-        <div class="weather__icon"><img class="icon" src="" alt=""></div>
+    <section class="center">
+        <section class="slider">
+            <div class="city__name"></div>
+            <div class="temperature__today"></div>
+            <div class="weather__description"></div>
+            <div class="weather__icon"><img class="icon" src="" alt=""></div>
+        </section>
+        <section class="map">
+            <div id="map" style="border-radius: 10px"></div>
+        </section>
     </section>
-    <section class="map">
-        <div id="map" style="border-radius: 10px"></div>
-    </section>
-</section>
 
 
-<script type="module" src="getInformationToWeather.js"></script>
-<script type="module" src="map.js"></script>
-<script type="module" src="appearanceOfTheMainPage.js"></script>
-<script src="https://api-maps.yandex.ru/2.1/?apikey=b90d9a9c-e12d-42b4-8503-6f938b185820
+    <script type="module" src="getInformationToWeather.js"></script>
+    <script type="module" src="map.js"></script>
+    <script type="module" src="appearanceOfTheMainPage.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b90d9a9c-e12d-42b4-8503-6f938b185820
 &lang=ru_RU" type="text/javascript"></script>
 </body>
+
 </html>

@@ -18,7 +18,7 @@ async function addWeatherInformation() {
   document.querySelector('.weather__description').innerHTML = requestJSON.weather[0].description;
   document.querySelector('.icon').src = `https://openweathermap.org/img/wn/${requestJSON.weather[0].icon}@2x.png`;
   console.log(requestJSON.coord)
-  return  requestJSON.coord
+  return requestJSON.coord
 }
 
 
@@ -31,4 +31,4 @@ function startSearch() {
 
 startSearch();
 
-export {addWeatherInformation}
+export { addWeatherInformation }
